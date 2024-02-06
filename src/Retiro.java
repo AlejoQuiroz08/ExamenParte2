@@ -17,7 +17,7 @@ public class Retiro {
     private JButton salirButton;
     private JButton entrarButton;
     private JButton borrarButton;
-    private double saldoActual = 200.0;
+    private JButton a0Button;
 
     class NumericButtonListener implements ActionListener {
         private String number;
@@ -41,13 +41,14 @@ public class Retiro {
         a7Button.addActionListener(new NumericButtonListener("7"));
         a8Button.addActionListener(new NumericButtonListener("8"));
         a9Button.addActionListener(new NumericButtonListener("9"));
+        a0Button.addActionListener(new NumericButtonListener("0"));
 
         entrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double cantidad = Double.parseDouble(textField1.getText());
-                if (cantidad <= saldoActual) {
-                    saldoActual -= cantidad;
+                if (cantidad <=  Saldo.saldoActual) {
+                    Saldo.saldoActual -= cantidad;
                     JOptionPane.showMessageDialog(retiro, "Retiro exitoso");
                 } else {
                     JOptionPane.showMessageDialog(retiro, "Saldo insuficiente");

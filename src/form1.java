@@ -16,6 +16,7 @@ public class form1 {
     private JButton entrarButton;
     private JButton borrarButton;
     private JButton salirButton;
+    private JButton a0Button;
 
     public form1() {
         a1Button.addActionListener(new NumericButtonListener("1"));
@@ -27,6 +28,7 @@ public class form1 {
         a7Button.addActionListener(new NumericButtonListener("7"));
         a8Button.addActionListener(new NumericButtonListener("8"));
         a9Button.addActionListener(new NumericButtonListener("9"));
+        a0Button.addActionListener(new NumericButtonListener("0"));
 
         borrarButton.addActionListener(new ActionListener() {
             @Override
@@ -37,6 +39,7 @@ public class form1 {
         salirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(login, "Gracias por usar nuestros servicios");
                 System.exit(0);
             }
         });

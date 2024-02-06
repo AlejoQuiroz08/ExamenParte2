@@ -18,7 +18,7 @@ public class Deposito {
 
     private JButton entrarButton;
     private JButton borrarButton;
-    private double saldoActual = 200.0;
+    private JButton a0Button;
 
     class NumericButtonListener implements ActionListener {
         private String number;
@@ -41,6 +41,7 @@ public class Deposito {
         a7Button.addActionListener(new Deposito.NumericButtonListener("7"));
         a8Button.addActionListener(new Deposito.NumericButtonListener("8"));
         a9Button.addActionListener(new Deposito.NumericButtonListener("9"));
+        a0Button.addActionListener(new Deposito.NumericButtonListener("0"));
 
         borrarButton.addActionListener(new ActionListener() {
             @Override
@@ -52,7 +53,7 @@ public class Deposito {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double cantidad = Double.parseDouble(textField1.getText());
-                saldoActual += cantidad;
+                Saldo.saldoActual += cantidad;
                 JOptionPane.showMessageDialog(deposito, "Depósito exitoso");
             }
         });

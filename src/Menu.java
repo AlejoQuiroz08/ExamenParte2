@@ -13,7 +13,10 @@ public class Menu {
         salirRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(menu1, "Gracias por usar nuestros servicios");
+
                 System.exit(0);
+
             }
         });
 
@@ -29,6 +32,7 @@ public class Menu {
                 saldoFrame.setVisible(true);
                 JFrame menuFrame = (JFrame) SwingUtilities.getWindowAncestor(menu1);
                 menuFrame.dispose();
+
             }
         });
 

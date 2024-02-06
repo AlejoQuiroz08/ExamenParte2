@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
         private JButton salirButton;
         private JLabel SaldoLabel;
 
-        private double saldoActual = 200.0;
+        static double saldoActual = 200.0;
 
         public Saldo() {
             actualizarSaldo();
